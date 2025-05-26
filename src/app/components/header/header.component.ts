@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   imports: [],
   template: `
-    <p>
-      header works!
-    </p>
+    <div class="header">
+      {{title()}}
+    </div>
   `,
   styles: ``
 })
 export class HeaderComponent {
+
+  //title: string = "Jacked Supplements App"
+  title = signal("Jacked Supplements App");
 
 }
